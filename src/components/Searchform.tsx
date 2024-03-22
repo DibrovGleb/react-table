@@ -7,7 +7,9 @@ const SearchForm = () =>{
                 <input type="search" />
                 <button type="submit">Искать</button>
             </div>
-            <button>Add new</button>
+            <div>
+                <button >Add new</button>
+            </div>
         </div>
     )
 }

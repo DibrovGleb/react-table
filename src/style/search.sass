@@ -1,19 +1,22 @@
 button
-    box-shadow: 0 0 0 2px #7c7c7c, 3px 3px 0 0 #7c7c7c
+    box-shadow: 0 0 0 1px #7c7c7c, 0px 2px 0 1px #7c7c7c
     background: transparent
     padding: 5px 10px
     border: 0    
-    transition: all 0.3s ease-in-out
-    cursor: url('../img/hover.png'),auto
-button:active
-    box-shadow: 0 0 0 2px #08c541d3
-    transform: translate(2px,2px)
+    transition: all 0.2s linear
+    
+button:hover
+    box-shadow: 0 0 0 1px #08c541d3
+    transform: translate(0px,3px)
 
 #search-container
     display: flex
     justify-content: space-between
+    align-items: center
+    text-wrap: nowrap
     input
         padding: 5px
+        margin: 0 10px 0 0 
     div
         button
             margin: 0 0 0 10px

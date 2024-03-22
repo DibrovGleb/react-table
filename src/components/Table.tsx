@@ -1,5 +1,6 @@
 import Product from '../redux/product.ts'
 import '../style/table.sass'
+
 const Table: React.FC<{ products: Product[] }> = ({ products }) => {
     return (
       <table>
@@ -15,7 +16,12 @@ const Table: React.FC<{ products: Product[] }> = ({ products }) => {
             <tr key={product.id}>
               <td><a href=''>{product.name}</a></td>
               <td>{product.price}</td>
-              <td>{product.id}</td>
+              <td>
+                <div>
+                  <input type="button" value="Edit" />
+                  <input type="button" value="Delete" />
+                </div>
+                </td>
             </tr>
           ))}
         </tbody>
