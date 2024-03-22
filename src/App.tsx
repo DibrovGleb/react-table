@@ -1,16 +1,18 @@
-import { useState } from 'react'
-import './App.css'
+/*import { useEffect } from "react";
+import { useDispatch } from "react-redux";*/
+import Table from "./components/Table"
+import SearchForm from "./components/Searchform";
+import data from './data.json';
+import './style/main.sass'
 
-function App() {
-  const [count, setCount] = useState(0)
 
+const App: React.FC = () => {
   return (
     <>
-      <div onClick={()=>setCount(count+1)}>
-        <h1>halloworld {count}</h1>
-      </div>
+      <SearchForm/>
+      <Table products={data}/>
     </>
-  )
-}
+  );
+};
 
-export default App
+export default App;

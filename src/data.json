@@ -1,0 +1,44 @@
+[
+    {
+      "id": 1,
+      "name": "Товар 1",
+      "supplier_email": "111@mail.ru",
+      "count": 1,
+      "price": 100,
+      "delivery": {
+        "country" : {
+          "id": 1,
+          "name": "Россия",
+          "city": "Москва"
+        }
+      }
+    },
+    {
+      "id": 2,
+      "name": "Товар 2",
+      "supplier_email": "2@mail.ru",
+      "count": 2,
+      "price": 200,
+      "delivery": {
+        "country" : {
+          "id": 2,
+          "name": "США",
+          "city": "Омерика"
+        }
+      }
+    },
+    {
+      "id": 3,
+      "name": "Товар 3",
+      "supplier_email": "3@mail.ru",
+      "count": 3,
+      "price": 300,
+      "delivery": {
+        "country" : {
+          "id": 3,
+          "name": "Япония",
+          "city": "Инчин"
+        }
+      }
+    }
+]

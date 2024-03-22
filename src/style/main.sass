@@ -4,21 +4,24 @@
     padding: 0
 
 @import url('https://fonts.googleapis.com/css2?family=Caveat&family=Roboto&display=swap')
+
 %font-roboto
     font-family: 'Roboto', sans-serif
     
 %font-caveat
-    font: 1.8em 'Caveat', cursive
+    font-family: 'Caveat', cursive
 
 body
     margin:0
-    padding:0
-    width: 100vw
-    height: 100vh
-    background: #cacaca56
+    padding:10px 0 0 0
+    background: #f1f1f156
+    cursor: url('../img/cursor.png'),auto
     #root
         display: grid
-        justify-items: center
+        justify-content: center
+        gap: 20px
         padding: 10px
-        @extend %font-caveat
+    a
+        cursor: url('../img/hover.png'),auto
+        
         
