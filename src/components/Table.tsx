@@ -1,4 +1,4 @@
-import Product from '../redux/product.ts'
+import Product from './redux/product.ts'
 import '../style/table.sass'
 
 const Table: React.FC<{ products: Product[] }> = ({ products }) => {

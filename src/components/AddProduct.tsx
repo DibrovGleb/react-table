@@ -1,9 +1,10 @@
 import { ChangeEvent, useState } from 'react'
 import '../style/addproduct.sass'
+import DeliveryOptions from './selects'
 
 const AddProduct = ()=>{
     const [value, setSelected] = useState('0'),
-          [radio,setRadio] = useState('false')
+          [radio,setRadio] = useState('')
 
     const handleChange = (e:ChangeEvent<HTMLInputElement>)=>{
         setRadio(e.target.value)
@@ -23,7 +24,8 @@ const AddProduct = ()=>{
             <label htmlFor="count">Count:</label>
             <input type="number" id="count" />
             <div id='delivery-container'>
-                <div className='delivery wrapper'>
+                <DeliveryOptions/>
+                {/* <div className='delivery wrapper'> 
                     <label htmlFor="select-choice">Delivery:</label>
                     <select name="select-choice" id="select-choice" onChange={e => setSelected(e.target.value)} >
                     <option value="0"></option>
@@ -46,7 +48,7 @@ const AddProduct = ()=>{
                     <label htmlFor="radio3">Япония</label>
                     </div>
                 </div></>}
-                {value == 'city' && <><hr></hr>
+                {(value == 'city' &&  radio) && <><hr></hr>
                 <div className='city wrapper'>
                     <div>
                     <input type="checkbox" id="check1" name="checkboxes" />
@@ -60,7 +62,7 @@ const AddProduct = ()=>{
                     <input type="checkbox" id="check3" name="checkboxes"/>
                     <label htmlFor="check3">Саратов</label>
                     </div>
-                </div></>}
+                </div></>}*/}
             </div>
             
         <button>Submit</button>
@@ -68,4 +70,6 @@ const AddProduct = ()=>{
     )
 }
 
+
+  
 export default AddProduct

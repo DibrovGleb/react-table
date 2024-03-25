@@ -9,6 +9,15 @@ form
     input
         &[type=text],&[type=email], &[type=number]
             padding: 5px 10px
+        &[type=checkbox], &[type=radio]
+            &:checked ~ label
+                background-color: #0075ff
+                color: white
+                border: 3px ridge #0075ff !important
+                
+        &[type=radio]
+            &:checked ~ label
+                border-radius: 10px
     svg
         position: absolute
         right: 10px
@@ -19,7 +28,8 @@ form
         &:hover
             background: #ff4b4b9a
     #delivery-container
-        margin: 10px 0 0
+        margin: 10px 10px 10px 0
+        
         display: flex
         gap: 20px
         height: 80px
@@ -27,6 +37,8 @@ form
             display: grid 
             align-content: start
             gap: 10px
+            label
+                text-wrap: nowrap
             div
                 display: flex
                 align-items: center
@@ -38,10 +50,12 @@ form
                 input
                     width: 20px
                     height: 20px
-                label
-                    user-select: none
-                    padding: 0 0 0 10px 
-                    cursor: url('../img/hover.png'),auto
+                    ~ label
+                        user-select: none
+                        padding: 2px 5px
+                        margin: 0 0 0 10px 
+                        border: 3px ridge transparent
+                        cursor: url('../img/hover.png'),auto
 
 @keyframes show
   0%
